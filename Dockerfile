@@ -5,4 +5,5 @@ RUN adduser --disabled-password --gecos '' user
 RUN echo 'user ALL=(root) NOPASSWD:ALL' > /etc/sudoers.d/user
 USER user
 WORKDIR /home/user
+RUN chmod 777 /home/user
 COPY . .
